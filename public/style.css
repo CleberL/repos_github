@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+form {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  flex: 1;
+  height: 55px;
+  padding: 0 20px;
+  background: #fff;
+  border: 0;
+  font-size: 1rem;
+  color: #444;
+  border-radius: 0.2rem;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  height: 55px;
+  padding: 0 20px;
+  margin-left: 0.8rem;
+  background: #000;
+  border: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0.2rem;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background: #474747;
+  box-shadow: none;
+}
+
+ul {
+  list-style: nome;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+li {
+  clear: both;
+  margin-top: 20px;
+  text-decoration: none;
+}
+img {
+  width: 80px;
+  float: left;
+  margin-right: 10px;
+}
+strong {
+  font-size: 20px;
+}
+p {
+  margin: 0;
+}
+#repositorios {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}

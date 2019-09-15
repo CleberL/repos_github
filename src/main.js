@@ -29,7 +29,10 @@ class App {
       description,
       html_url,
       owner: { avatar_url },
-      stargazers_count
+      stargazers_count,
+      forks_count,
+      open_issues,
+      pushed_at
     } = response.data;
 
     this.repositories.push({
@@ -37,7 +40,10 @@ class App {
       description,
       avatar_url,
       html_url,
-      stargazers_count
+      stargazers_count,
+      forks_count,
+      open_issues,
+      pushed_at
     });
 
     this.inputEl.value = "";
@@ -56,10 +62,29 @@ class App {
       titleEl.appendChild(document.createTextNode(repo.name));
 
       let descriptionEl = document.createElement("p");
-      descriptionEl.appendChild(document.createTextNode(`${repo.description || 'sem descrição'}`));
+      descriptionEl.appendChild(
+        document.createTextNode(`${repo.description || "sem descrição"}`)
+      );
 
       let starsEl = document.createElement("p");
-      starsEl.appendChild(document.createTextNode(`Stars: ${repo.stargazers_count || '0'}`));
+      starsEl.appendChild(
+        document.createTextNode(`Stars: ${repo.stargazers_count || "0"}`)
+      );
+
+      let forksEl = document.createElement("p");
+      forksEl.appendChild(
+        document.createTextNode(`Forks: ${repo.forks_count || "0"}`)
+      );
+
+      let issuesEl = document.createElement("p");
+      issuesEl.appendChild(
+        document.createTextNode(`Issues: ${repo.open_issues || "0"}`)
+      );
+
+      let lastCommitEl = document.createElement("p");
+      lastCommitEl.appendChild(
+        document.createTextNode(`Last Commit: ${repo.pushed_at}`)
+      );
 
       let linkEl = document.createElement("a");
       linkEl.setAttribute("target", "_blank");
@@ -71,6 +96,9 @@ class App {
       listItemEl.appendChild(titleEl);
       listItemEl.appendChild(descriptionEl);
       listItemEl.appendChild(starsEl);
+      listItemEl.appendChild(forksEl);
+      listItemEl.appendChild(issuesEl);
+      listItemEl.appendChild(lastCommitEl);
       listItemEl.appendChild(linkEl);
 
       this.listEl.appendChild(listItemEl);

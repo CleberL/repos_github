@@ -3,48 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <title>API Github</title>
-    <style>
-      ul {
-        list-style: nome;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-      li {
-        clear: both;
-        margin-top: 20px;
-      }
-      img {
-        width: 80px;
-        float: left;
-        margin-right: 10px;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      strong {
-        font-size: 20px;
-      }
-      p {
-        margin: 0;
-      }
-      .repositorios{
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form id="repo-form">
-      <strong id='repositorios'>Comparador de Repositórios</strong>
-      <div>
-        <input type="text" name="repository" />
-        <button type="submit">Adicionar</button>
-      </div>
-    </form>
+    <div class="container">
+      <form id="repo-form">
+        <strong id="repositorios">Comparador de Repositórios</strong>
+        <div id="container_input">
+          <input
+            type="text"
+            placeholder="Usuário/Repositório"
+            name="repository"
+          />
+          <button type="submit">Adicionar</button>
+        </div>
+      </form>
 
-    <ul id="repo-list"></ul>
+      <ul id="repo-list"></ul>
+    </div>
 
     <script src="./bundle.js"></script>
   </body>
