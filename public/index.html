@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <title>API Github</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <form id="repo-form">
-        <strong id="repositorios">Comparador de Repositórios</strong>
-        <div id="container_input">
-          <input
-            type="text"
-            placeholder="Usuário/Repositório"
-            name="repository"
+      <div id="right">
+        <form id="repo-form">
+          <img
+            id="logo"
+            src="http://pngimg.com/uploads/github/github_PNG20.png"
           />
-          <button type="submit">Adicionar</button>
-        </div>
-      </form>
-
-      <ul id="repo-list"></ul>
+          <strong id="description-form">Consulta de Repositórios</strong>
+          <div id="container_input">
+            <input
+              type="text"
+              placeholder="Usuário/Repositório"
+              name="repository"
+            />
+            <button type="submit">Adicionar</button>
+          </div>
+        </form>
+      </div>
+      <div id="left">
+        <ul id="repo-list"></ul>
+      </div>
     </div>
 
     <script src="./bundle.js"></script>
