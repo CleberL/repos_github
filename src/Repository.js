@@ -26,19 +26,16 @@ class Repository {
     };
   }
 
-  render(
-    {
-      avatar_url,
-      name,
-      description,
-      stargazers_count,
-      forks_count,
-      open_issues,
-      pushed_at,
-      html_url
-    },
-    index
-  ) {
+  render({
+    avatar_url,
+    name,
+    description,
+    stargazers_count,
+    forks_count,
+    open_issues,
+    pushed_at,
+    html_url
+  }) {
     const repository = document.createElement("li");
     repository.innerHTML = `
     <img src="${avatar_url}" alt="Icone do Repositório">
