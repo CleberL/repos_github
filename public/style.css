@@ -9,14 +9,13 @@
 
 #right {
   flex: 1;
-  height: 100%;
 }
 #left {
+  margin-top: -30px;
   flex: 1;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  height: 100%;
 }
 
 #description-form {

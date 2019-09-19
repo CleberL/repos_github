@@ -31,15 +31,9 @@ class App {
 
   render() {
     this.listRepositories.innerHTML = "";
-    this.exclude = this.exclude.bind(this);
     this.repositories.forEach(repository => {
-      this.listRepositories.appendChild(close);
       this.listRepositories.appendChild(this.repository.render(repository));
     });
-  }
-  exclude(index) {
-    console.log("ok");
-    //this.render();
   }
 }
 
